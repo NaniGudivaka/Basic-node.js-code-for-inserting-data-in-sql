@@ -113,10 +113,11 @@ app.get('/get', (req, res) => {
     }
     res.json(result);
   });
+
+
+});
 app.get('/', (req,res)=>{
   console.log('Hello Nani');
-});
-
 });
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
