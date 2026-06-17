@@ -1,0 +1,76 @@
+# Food Menu CRUD API
+
+A RESTful API built using Node.js, Express.js, and MySQL to perform CRUD (Create, Read, Update, Delete) operations on food menu items.
+
+## Features
+
+* Add new food items to the menu
+* Retrieve all menu items
+* Update existing food records
+* Delete menu items
+* MySQL database integration
+* REST API architecture
+* JSON request and response handling
+
+## Technologies Used
+
+* Node.js
+* Express.js
+* MySQL
+* CORS
+
+## API Endpoints
+
+### Create Food Item
+
+```http
+POST /post
+```
+
+### Get All Food Items
+
+```http
+GET /get
+```
+
+### Update Food Item
+
+```http
+PUT /update/:id
+```
+
+### Delete Food Item
+
+```http
+DELETE /delete/:id
+```
+
+## Database
+
+Database: `foods`
+
+Table: `menu`
+
+Fields:
+
+* id
+* foodName
+* foodCost
+* foodType
+* softDrink
+* costOfDrink
+
+## Project Status
+
+✅ CRUD Operations Completed
+
+Planned Improvements:
+
+* Input Validation
+* Authentication & Authorization
+* Environment Variables (.env)
+* Error Handling Enhancements
+
+## Author
+
+Nani Gudivaka

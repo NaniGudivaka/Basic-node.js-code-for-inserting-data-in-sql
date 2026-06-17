@@ -1,8 +1,9 @@
 const mysql = require('mysql2');
 const express = require('express');
+const dotenv = require('dotenv');
 const cors = require('cors')
 
-
+dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -10,10 +11,10 @@ app.use(express.json());
 //creating a connection
 
 const con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '133177066@Nani',
-  database: 'foods'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 
 con.connect((error) => {
@@ -114,7 +115,7 @@ app.get('/get', (req, res) => {
 
 
 });
-
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
   console.log('Server Started');
 });
