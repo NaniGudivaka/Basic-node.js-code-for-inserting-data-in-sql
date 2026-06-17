@@ -117,7 +117,7 @@ app.get('/get', (req, res) => {
 
 });
 app.get('/', (req,res)=>{
-  console.log('Hello Nani');
+  res.send('Food CRUD API Running');
 });
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
